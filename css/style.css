@@ -1,0 +1,474 @@
+/* Importação de fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* Limpar formatações padrão */
+
+* {
+    margin: 0;
+}
+
+/* Animações */
+
+@keyframes cellSpringUp {
+    from {transform: scale(0, 0)}
+    to {transform: scale(1, 1)}
+}
+
+@keyframes carouselSpringUp {
+    from {transform: scale(0.975, 0.975)}
+    to {transform: scale(1, 1)}
+}
+
+/* Estilo Principal */
+
+body {
+    font-size: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #202020;
+}
+
+.banner {
+    padding: 25px;
+    background-color: #eee;
+}
+
+.banner img {
+    height: 50px;
+}
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0 25px;
+    background-color: #ccc;
+}
+
+nav a, nav a:visited {
+    color: #505050;
+    text-decoration: none;
+    padding: 20px;
+}
+
+nav a:hover {
+    color: #ccc;
+    background-color: #943f42;
+}
+
+nav ul {
+    padding: 20px 0px;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+}
+
+.nav-item-right {
+    float: right;
+}
+
+.gap-area {
+    background: url(../media/bg-element_.png) #202020;
+}
+
+.gap-area h1 {
+    position: absolute;
+    top: 40.75%;
+    left: 10%;
+    font-size: 3.33vw;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+#carousel {
+    position: relative;
+    margin: 0 auto;
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    border-radius: 5px;
+    height: 350px;
+    max-width: 1060px;
+    transition: transform 0.4s;
+    box-shadow: 0px 2px 8px #202020;
+    animation-name: carouselSpringUp;
+    animation-duration: 0.4s;
+
+}
+
+.carousel-button-next,
+.carousel-button-prev {
+    position: absolute;
+    top: 175px;
+    text-align: center;
+    color: #9a9a9a;
+    background-color: #000;
+    font-size: 1.125em;
+    padding: 15px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.carousel-button-next {
+    border-radius: 5px 0px 0px 5px;
+    right: 0;
+}
+
+.carousel-button-prev {
+    border-radius: 0px 5px 5px 0px;
+    left: 0;
+}
+
+.carousel-button-next:hover {
+    color: #f08c90;
+    background-color: #943f42;
+}
+
+.carousel-button-prev:hover {
+    color: #f08c90;
+    background-color: #943f42;
+}
+
+.slide {
+    display: none;
+}
+
+.active, .carousel-dot:hover
+{
+    background-color: #943f42;
+}
+
+.carousel-dot {
+    position: absolute;
+    bottom: 5%;
+    border-radius: 100px;
+    background-color: #9a9a9a;
+    width: 0.75vw;
+    height: 0.75vw;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-shadow: 0px 2px 8px #202020;
+}
+
+.carousel-dot:first-child
+{
+    left: 48%;
+}
+
+.carousel-dot:nth-child(2)
+{
+    left: 50%;
+}
+
+.carousel-dot:nth-child(3)
+{
+    left: 52%;
+}
+
+.main-area {
+    padding: 25px;
+    background: url('../media/squares.png') #eee bottom right no-repeat;
+}
+
+.main-area a, a:visited {
+    border-bottom: 1px #943f42 dotted;
+    color: #943f42;
+    text-decoration: none;
+}
+
+.main-area a:hover {
+    border-color: #f08c90;
+    color: #f08c90;
+}
+
+.main-area h1 {
+    color: #505050;
+}
+
+.main-area hr {
+    border: none;
+    border-bottom: 2px #9a9a9a solid;
+    margin: 0.75em 0;
+}
+
+.main-area-text-area {
+    width: 1080px;
+    margin: 25px auto;
+}
+
+.main-area img {
+    border-radius: 5px;
+}
+
+.lead-paragraph
+{
+    color: #505050;
+    text-align: center;
+    font-size: 1.125em;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.img
+{
+    margin-bottom: 15px;
+    animation-name: cellSpringUp;
+    animation-duration: 0.4s;
+    transition: transform 0.4s;
+}
+
+.main-area-text-area img:hover
+{
+    transform: scale(1.0125, 1.0125);
+}
+
+#product-table {
+    width: 1080px;
+    margin: auto;
+}
+
+#product-table button {
+    color: #505050;
+    font-size: 1em;
+    width: 130px;
+    background: none;
+    transition: background-color 0.5s, width 0.5s, color 0.5s, border-color 0.5s;
+    border: 2px #505050 solid;   
+    border-radius: 50px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#product-table button:hover
+{
+    color: #fff;
+    background-color: #943f42;
+    width: 150px;
+    border-color: #943f42;
+}
+
+.product-cell {
+    float: left;
+    margin: 10px;
+    padding: 25px 0px;
+    width: 250px;
+    height: 325px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px #d0d0d0;
+    transition: color 0.25s, background-color 0.25s, transform 0.25s;
+    text-align: center;
+    animation-name: cellSpringUp;
+    animation-duration: 0.4s;
+}
+
+.product-cell:hover {
+    color: #fff;
+    background-color: #943f42;
+    transform: scale(1.05, 1.05);
+}
+
+.product-cell:hover .product-name {
+    color: #fff;
+}
+
+.product-cell:hover .product-price {
+    color: #f08c90;
+}
+
+.product-name {
+    font-weight: bold;
+    color: #505050;
+    margin-top: 25px;
+}
+
+.product-price {
+    font-size: 1.5em;
+    color: #943f42;
+    transition: color 0.25s;
+}
+
+#button-container {
+    width: 130px;
+    margin: 0 auto;
+    transition: width 0.5s;
+}
+
+#button-container:hover {
+    width: 150px;
+}
+
+footer {
+    color: #505050;
+    font-size: 0.75em;
+    padding: 20px 0;
+    text-align: center;
+    background: #ccc;
+}
+
+/* Estilo de Tabela */
+
+.main-area table {
+    border: none;
+    width: 100%;
+    background-color: #eee;
+    border-collapse: collapse;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 2px 8px #d0d0d0;
+}
+
+.main-area th
+{
+    background-color: #eee;
+    color: #505050;
+}
+
+.main-area th,
+.main-area td {
+    border: 0px black solid;
+    padding: 15px;
+}
+
+.main-area tr {
+    transition: color 0.25s, background-color 0.25s;
+}
+
+.main-area tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.main-area tr:hover {
+    background-color: #943f42;
+    color: #fff;   
+}
+
+.main-area td {
+    text-align: center;
+}
+
+/* Estilo de Listas */
+
+.list-container {
+    padding: 15px;
+}
+
+.main-area-text-area ul {
+    list-style-type: square;
+}
+
+.list dt,
+.list dd {
+    color: #943f42;
+    font-size: 1.125em;
+}
+
+.list dt {
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.list dd {
+    margin-left: 15px;
+}
+
+.list ul li {
+    margin: 15px;
+}
+
+/* Estilo de Formulário */
+
+input[type="text"],
+input[type="date"],
+input[type="password"] {
+    margin: 15px 0px;
+    border: 1px #505050 solid;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    outline: none;
+    transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus {
+    border-color: #943f42;
+    background-color: #f7c5c7;
+    color: #943f42;
+}
+
+input[type="text"] {
+    width: 300px;
+}
+
+input[type="submit"] {
+    color: #505050;
+    font-size: 1em;
+    width: 130px;
+    background: none;
+    transition: background-color 0.5s, width 0.5s, color 0.5s, border-color 0.5s;
+    border: 2px #505050 solid;   
+    border-radius: 50px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    color: #fff;
+    background-color: #943f42;
+    width: 150px;
+    border-color: #943f42;
+}
+
+.input-item {
+    margin-right: 10px;
+}
+
+#input-container {
+    width: 130px;
+    margin: 0 auto;
+    transition: width 0.5s;
+}
+
+#input-container:hover {
+    width: 150px;
+}
+
+/* Estilo Miscelâneo */
+
+.highlighted-txt {
+    color: #943f42;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.txt-align-center {
+    text-align: center;
+}
+
+.float-l {
+    float: left;
+}
+
+.clear-r {
+    clear: right;
+}
+
+.clear-l {
+    clear: left;
+}
+
+.min-height {
+    min-height: 300px;
+}

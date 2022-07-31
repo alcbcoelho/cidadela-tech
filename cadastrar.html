@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadela Tech - Cadastrar-se</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <a href="index.html"><img src="media/logo.svg"></a>
+        </div>
+        <nav>
+            <ul>
+                <li class="nav-item-left"><a href="index.html">Produtos</a></li>
+                <li class="nav-item-left"><a href="sobre-a-empresa.html">Sobre Nós</a></li>
+                <li class="nav-item-left"><a href="listas.html">Nossos Pilares</a></li>
+                <li class="nav-item-left"><a href="estoque.html">Estoque</a></li>
+                <li class="nav-item-right"><a href="">Cadastrar-se</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-area clear-r">
+        <div class="main-area-text-area">
+            <h1>Cadastre-se</h1>
+            <hr style="margin-bottom: 25px;">
+            <p class="lead-paragraph">Cadastre-se na Cidadela para desfrutar de uma experiência de excelência.<br>Fique a par de descontos, novidades e faça suas compras de forma muito mais rápida!</p>
+            <p id="mandatory-fields" style="color: red; font-size: 0.75em; margin: 25px auto;"><sup>*</sup>: Campos obrigatórios.</p>
+            <form>
+                <label class="mandatory" for="nome">Nome completo:</label><br>
+                <input type="text" id="nome" name="nome" required><br>
+
+                <label class="mandatory" for="data-de-nascimento">Data de nascimento:</label><br>
+                <input type="date" id="data-de-nascimento" name="data-de-nascimento"><br>
+
+                <div><label>Sexo:</label></div><br>
+                <div class="input-item float-l"><input type="radio" id="sexo-m" name="sexo" value="m"><label for="sexo-m">Masculino</label></div>
+                <div class="input-item"><input type="radio" id="sexo-f" name="sexo" value="f"><label for="sexo-f">Feminino</label></div><br>
+                
+                <label class="mandatory" for="email">E-mail:</label><br>
+                <input type="text" id="email" name="email" required><br>
+
+                <label class="mandatory" for="password">Senha:</label><br>
+                <input type="password" id="password" name="password" required><br>
+
+                <div style="margin-top: 15px;"><input type="checkbox" id="privacy-policy-agreement" name="privacy-policy-agreement" value="yes" required>
+                <label class="mandatory" for="privacy-policy-agreement">Estou de acordo com a <a href="">política de privacidade</a> da Cidadela Tech.</label><br>
+                <input type="checkbox" id="receive-email" name="receive-email" value="yes">
+                <label for="receive-email">Desejo receber e-mails promocionais.</label></div><br>
+
+                <div id="input-container">
+                    <input type="submit" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="clear-l">
+        <p>Todos os direitos reservados</p>
+    </footer>
+    <script src="js/form.js"></script>
+</body>
+</html>
