@@ -1,14 +1,14 @@
-/* Importação de fonte */
+/* Font import */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-/* Limpar formatações padrão */
+/* Clear default formatting */
 
 * {
     margin: 0;
 }
 
-/* Animações */
+/* Animations */
 
 @keyframes cellSpringUp {
     from {transform: scale(0, 0)}
@@ -20,7 +20,13 @@
     to {transform: scale(1, 1)}
 }
 
-/* Estilo Principal */
+@keyframes barFill {
+    0% {width: 0%}
+    99.5% {width: 100%}
+    /* 100% {width: 100%} */
+}
+
+/* Main CSS */
 
 body {
     font-size: 1em;
@@ -37,12 +43,34 @@ body {
     height: 50px;
 }
 
+/* .sub-banner {
+
+} */
+
+.sb1,
+.sb2 {
+    height: 16px;
+}
+
+.sb2 {
+    height: 16px;
+    width: 234px;
+    background: url("../media/border-merlons.png") #eee bottom left no-repeat;
+}
+
+.sb1 {
+    height: 13px;
+    border-bottom: 2px #202020 solid;
+    width: 100%;
+}
+
 nav {
+    /* background: url("../media/border-merlons.png") #ccc top left repeat-x; */
+    background-color: #ccc;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    padding: 0 25px;
-    background-color: #ccc;
+    padding: /*15px 25px*/ 0 25px;
 }
 
 nav a, nav a:visited {
@@ -83,20 +111,58 @@ nav li {
     z-index: 1;
 }
 
-#carousel {
-    position: relative;
+.carousel,
+.carousel-bar
+{
+    max-width: 1060px;
     margin: 0 auto;
+}
+
+.carousel {
+    position: relative;
+    /* margin: 0 auto; */
     background-position: 50% 55%;
     background-repeat: no-repeat;
     background-color: #eee;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     height: 350px;
-    max-width: 1060px;
-    transition: transform 0.4s;
+    /* max-width: 1060px; */
+    transition: background-image 0.5s;
     box-shadow: 0px 2px 8px #202020;
+
     animation-name: carouselSpringUp;
     animation-duration: 0.4s;
+}
 
+.carousel-bar,
+.carousel-bar-fill {
+    height: 5px;
+}
+
+.carousel-bar {
+    background-color: #9a9a9a;
+}
+
+.carousel-bar-fill {
+    background-color: #943f42;
+    animation: barFill 2.5s linear infinite;
+}
+
+.carousel-dot-container {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 100px;
+    transform: translate(-50%, 0);
+    transition: background-color 0.5s;
+}
+
+.carousel-dot-container:hover {
+    background-color: #000;
 }
 
 .carousel-button-next,
@@ -136,37 +202,24 @@ nav li {
     display: none;
 }
 
-.active, .carousel-dot:hover
+#active, .carousel-dot:hover
 {
     background-color: #943f42;
 }
 
 .carousel-dot {
-    position: absolute;
-    bottom: 5%;
+    /* position: absolute;
+    bottom: 5%; */
     border-radius: 100px;
     background-color: #9a9a9a;
-    width: 0.75vw;
-    height: 0.75vw;
+    width: 12px;
+    height: 12px;
+    /* width: 0.75vw;
+    height: 0.75vw; */
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.2s;
     text-shadow: 0px 2px 8px #202020;
-}
-
-.carousel-dot:first-child
-{
-    left: 48%;
-}
-
-.carousel-dot:nth-child(2)
-{
-    left: 50%;
-}
-
-.carousel-dot:nth-child(3)
-{
-    left: 52%;
 }
 
 .main-area {
